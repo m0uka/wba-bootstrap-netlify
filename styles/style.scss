@@ -1,0 +1,38 @@
+$body-bg: #FFFFFF;
+
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/utilities";
+
+$custom-theme-colors: ("aqua": #00FFFF);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+$custom-spacer-map: (
+    "large": 10rem,
+);
+
+$spacers: map-merge($spacers, $custom-spacer-map);
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "color": map-merge(
+//       map-get($utilities, "color"),
+//       (
+//         values: map-merge(
+//           map-get(map-get($utilities, "color"), "values"),
+//           (
+//             $theme-colors
+//           ),
+//         ),
+//       ),
+//     ),
+//   )
+// );
+
+
+@import "../bootstrap/scss/bootstrap.scss";
+
+.main-content {
+    height: 90vh;
+}
